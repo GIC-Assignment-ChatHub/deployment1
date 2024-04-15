@@ -1,0 +1,1 @@
+kubectl apply -f ../k3s/ingress.yaml -n gic-chathub
