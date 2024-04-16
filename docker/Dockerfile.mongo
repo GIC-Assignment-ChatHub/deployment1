@@ -15,6 +15,3 @@ VOLUME /data/db
 # Expose port 27017 from the container to the host
 EXPOSE 27017
 EXPOSE 28017
-
-# Start MongoDB when the container launches
-CMD ["mongod"]
