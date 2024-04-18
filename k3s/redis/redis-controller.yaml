@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: redis
+  namespace: gic-chathub
+spec:
+  replicas: 1
+  selector:
+    name: redis
+  template:
+    metadata:
+      labels:
+        name: redis
+        role: master
+    spec:
+      containers:
+      - name: redis
+        image: registry.deti/gic-chathub/redis:latest
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - mountPath: /redis-master-data
+          name: data
+      volumes:
+        - name: data
