@@ -23,14 +23,13 @@ spec:
         command: ["/bin/sh"]
         args: ["-c", "mongod --replSet=rs0 --bind_ip_all"]
         ports:
-        - name: mongo-port
-          containerPort: 27017
+          - containerPort: 27017
         volumeMounts:
-        - name: mongo-data
-          mountPath: /data/db
+        - name: mongo-persistent-storage
+          mountPath: /data/tailchat/db
   volumeClaimTemplates:
   - metadata:
-      name: mongo-data
+      name: mongo-persistent-storage
     spec:
       storageClassName: longhorn
       accessModes:
