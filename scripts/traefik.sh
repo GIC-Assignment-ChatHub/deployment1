@@ -1,1 +1,0 @@
-kubectl apply -f ../k3s/traefik/traefik.yml
