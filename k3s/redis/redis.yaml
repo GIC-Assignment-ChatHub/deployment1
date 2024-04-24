@@ -1,4 +1,3 @@
-# StatefulSet for Redis High Availability with sentinel
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:

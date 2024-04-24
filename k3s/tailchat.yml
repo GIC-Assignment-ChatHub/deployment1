@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: tailchat
-        image: moonrailgun/tailchat
-        # imagePullPolicy: Always
+        image: moonrailgun/tailchat # TODO: replace with ours once problem with building is fixed
         env:
           - name: SERVICEDIR
             value: services,plugins

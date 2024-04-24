@@ -8,6 +8,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: mongo-role
+  namespace: gic-chathub
 rules:
 - apiGroups: [""]
   resources: ["configmaps"]
@@ -26,6 +27,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: mongo_role_binding
+  namespace: gic-chathub
 subjects:
 - kind: ServiceAccount
   name: mongo-account
