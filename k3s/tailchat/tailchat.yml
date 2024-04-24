@@ -22,11 +22,11 @@ spec:
           - name: SERVICEDIR
             value: services,plugins
           - name: TRANSPORTER
-            value: redis://:admin@redis:6379
+            value: redis://:admin@redis-0.redis.gic-chathub.svc.cluster.local:6379
           - name: REDIS_URL
-            value: redis://:admin@redis:6379
+            value: redis://:admin@redis-0.redis.gic-chathub.svc.cluster.local:6379
           - name: MONGO_URL
-            value: mongodb://mongo:27017/tailchat
+            value: mongodb://mongodb-replica-0.mongo:27017/tailchat
           - name: MINIO_URL
             value: minio-service:9000
           - name: MINIO_USER
