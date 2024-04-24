@@ -27,6 +27,19 @@ spec:
             claimName: static-pvc
 ---
 apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: static-pvc
+  namespace: gic-chathub
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 10Mi
+---
+apiVersion: v1
 kind: Service
 metadata:
   name: website-service

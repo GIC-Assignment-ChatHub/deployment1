@@ -1,9 +1,6 @@
 echo "--- Deploying namespace"
 ./namespace.sh
 
-echo "--- Deploying storage"
-./storage.sh
-
 echo "--- Deploying ingress"
 ./ingress.sh
 
