@@ -1,1 +1,0 @@
-kubectl create namespace gic-chathub

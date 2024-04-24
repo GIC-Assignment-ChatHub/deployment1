@@ -1,6 +1,3 @@
-# Dockerfile for MongoDB
-
-# Use Alpine Linux as base image
 FROM alpine:3.9
 
 # Install MongoDB

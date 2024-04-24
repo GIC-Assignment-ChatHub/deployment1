@@ -1,7 +1,16 @@
-kubectl apply -f ../k3s/minio/minio-secret.yaml
+#!/bin/bash
+source load_env.sh
 
-kubectl apply -f ../k3s/minio/minio-headless.yaml
+if [ -z "$K3S" ]; then
+    echo "K3S is not set (check .env file)"
+    exit 1
+fi
+if [ -z "$NAMESPACE" ]; then
+    echo "NAMESPACE is not set (check .env file)"
+    exit 1
+fi
 
-kubectl apply -f ../k3s/minio/minio-stateful-deployment.yaml
-
-kubectl apply -f ../k3s/minio/minio-service.yaml
+kubectl apply -f $K3S/minio/minio-secret.yaml -n $NAMESPACE
+kubectl apply -f $K3S/minio/minio-headless.yaml -n $NAMESPACE
+kubectl apply -f $K3S/minio/minio-stateful-deployment.yaml -n $NAMESPACE
+kubectl apply -f $K3S/minio/minio-service.yaml -n $NAMESPACE
