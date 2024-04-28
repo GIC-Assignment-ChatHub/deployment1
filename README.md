@@ -23,6 +23,7 @@ This repository contains the first deployment of ChatHub. It uses Docker and K3s
     - The `mongo-config.md` contains the instructions to configure MongoDB in the deployment.
 - `config`: configuration to access cluster in OpenLens.
 - `hosts`: information you need to add in your `/etc/hosts` file, to be able to access the services.
+- `report.pdf`: report regarding this first deployment, [click here](report.pdf) to check it out.
 - `Vagrantfile`: configuration of the Vagrant VM.
 
 ## Authors
